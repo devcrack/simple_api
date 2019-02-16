@@ -1,6 +1,7 @@
 import os 
 
-base_dir = os.path.abspath(__file__)
+dir_path = os.path.dirname(__file__)
+base_dir = os.path.abspath(dir_path)
 
 class Config:
     secret_key = os.getenv('SECRET_KEY', 'mientras123' )
