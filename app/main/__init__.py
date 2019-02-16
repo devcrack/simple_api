@@ -1,18 +1,4 @@
-""" Stupid Source Data """
-user = [
-        {
-            "name":"Roberto",
-            "age":60,
-            "occupation":"Electronic Technique"
-        },
-        {
-            "name":"Jonas",
-            "age":18,
-            "occupation":"Nini"
-        },
-        {
-            "name":"Aurelio",
-            "age":26,
-            "occupation":"Not know what the fuck do with his life"        
-        }
-    ]
+""" import os 
+
+dir_path = os.path.dirname(__file__)
+base_dir = os.path.abspath(dir_path) """
