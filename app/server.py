@@ -1,3 +1,12 @@
+from flask import Flask
+from flask_restful import Api
+from flask_restful import Resource 
+from flask_restful import reqparse
+
+
+app = Flask(__name__)
+api = Api(app)
+
 """ Stupid Source Data """
 user = [
         {
@@ -16,3 +25,4 @@ user = [
             "occupation":"Not know what the fuck do with his life"        
         }
     ]
+
