@@ -19,12 +19,12 @@ class Testing_Config(Config):
     PRESERVE_CONTEXT_ON_EXCEPTION = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-class Production_Conifg(Config):
+class Production_Config(Config):
     DEBUG = False
 
 config_by_name = dict(
     dev = Development_Config,
     test = Testing_Config,
-    prod = Production_Conifg
+    prod = Production_Config
 )
 
