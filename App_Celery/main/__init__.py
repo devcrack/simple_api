@@ -12,5 +12,6 @@ mail = Mail(app)
 #Create of celery object for app
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 
-#celery.conf.update(app.config)
+#updating celery configure
+celery.conf.update(app.config)
 
