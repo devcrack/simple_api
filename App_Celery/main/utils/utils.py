@@ -1,8 +1,10 @@
 from flask import request, session, render_template, flash, redirect
 from flask import url_for
 from flask_mail import Message
-from .. import mail
 from .. import app
+from .. import mail
+
+from ..celery_tasks.send_mails import send_async_email
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -13,8 +15,7 @@ def index():
     session['email'] = email
 
     # send the email
-    msg = Message('Hello from Flask',
-                  recipients=[request.form['email']])
+    msg = Message('Hello from Flask', recipients=[request.form['email']])
     msg.body = 'This is a test email sent from a background Celery task.'
     if request.form['submit'] == 'Send':
         # send right away

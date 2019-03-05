@@ -1,6 +1,7 @@
 from flask import Flask 
 from flask_mail import Mail
 from celery import Celery 
+import config
 
 app = Flask(__name__)
 #We load configuration from config.Development_Config.. as we can see
@@ -14,4 +15,4 @@ celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 
 #updating celery configure
 celery.conf.update(app.config)
-
+from .utils import utils 

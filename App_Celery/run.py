@@ -1,7 +1,8 @@
 from main import app
-from main import celery
 
 
-print(celery.conf)
-#print(app.config)
-app.run()
+
+#print(celery.conf)
+print(app.config)
+if __name__ == '__main__':    
+    app.run()
